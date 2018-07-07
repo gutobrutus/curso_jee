@@ -1,4 +1,4 @@
-package com.algaworks.financeiro;
+package com.algaworks.financeiro.training;
 
 import javax.faces.bean.ManagedBean;
 

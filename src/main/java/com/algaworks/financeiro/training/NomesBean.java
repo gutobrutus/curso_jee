@@ -1,4 +1,4 @@
-package com.algaworks.financeiro;
+package com.algaworks.financeiro.training;
 
 import java.util.ArrayList;
 import java.util.List;
