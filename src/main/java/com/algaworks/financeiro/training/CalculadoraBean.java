@@ -1,5 +1,10 @@
 package com.algaworks.financeiro.training;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ManagedBean
+@ViewScoped
 public class CalculadoraBean {
 	private Double valorA;
 	private Double valorB;
