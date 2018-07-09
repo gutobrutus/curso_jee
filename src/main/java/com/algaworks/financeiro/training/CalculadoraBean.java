@@ -6,6 +6,7 @@ import javax.faces.bean.ViewScoped;
 @ManagedBean
 @ViewScoped
 public class CalculadoraBean {
+	private String nome;
 	private Double valorA;
 	private Double valorB;
 	private Double resultado;
@@ -37,6 +38,11 @@ public class CalculadoraBean {
 	public void setResultado(Double resultado) {
 		this.resultado = resultado;
 	}
-	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	
 }

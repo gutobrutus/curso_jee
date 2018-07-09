@@ -10,28 +10,34 @@
 		<h1>Calculadora</h1>
 		<h:form id="frm">
 			<h:messages />
-			<h:inputText size="12" value="#{calculadoraBean.valorA}">
+			<h:outputLabel value="Seu nome: " for="seuNome"/>
+				<h:inputText size="12" value="#{calculadoraBean.nome}"
+					id="seuNome" label="Seu nome" required="true">
+					<f:validateLength minimum="3" maximum="15" />
+				</h:inputText>
+			<br/>
+			<h:inputText size="12" value="#{calculadoraBean.valorA}"
+				label="Valor A" required="true">
 				<f:convertNumber minFractionDigits="2" maxFractionDigits="2"
 					locale="pt_BR" />
 			</h:inputText>
 			+
-			<h:inputText size="12" value="#{calculadoraBean.valorB}">
+			<h:inputText size="12" value="#{calculadoraBean.valorB}"
+				label="Valor B" required="true">
 				<f:convertNumber minFractionDigits="2" maxFractionDigits="2"
 					locale="pt_BR" />
 			</h:inputText>
-			=
-			<h:outputText value="#{calculadoraBean.resultado}">
-				<f:convertNumber type="currency" locale="pt_BR" />
-			</h:outputText>
-			<br />
+			<h:panelGroup rendered="#{calculadoraBean.resultado != null}">
+				<h:outputText value="#{calculadoraBean.nome}, o resultado é " />
+				<h:outputText value="#{calculadoraBean.resultado}" />
+				<br />
+			</h:panelGroup>
 			<h:commandButton value="Somar" action="#{calculadoraBean.somar}" />
 		</h:form>
 		<br />
 		<br />
 		<h:form id="frm2">
-			<h:messages />
-			<h:messages showDetail="true" showSummary="false" />
-			<h:inputText size="12" value="#{calculadoraDataBean.dataBase}">
+			<h:inputText size="12" value="#{calculadoraDataBean.dataBase}" label="Data Base">
 				<f:convertDateTime pattern="dd/MM/yyyy" />
 			</h:inputText>
 			+

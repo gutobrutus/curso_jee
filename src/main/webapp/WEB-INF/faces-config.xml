@@ -7,7 +7,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	
 	<application>
 		<message-bundle>
-			com.algaworks.resources
+			com.algaworks.resources.Messages
 		</message-bundle>
 	</application>
 </faces-config>
